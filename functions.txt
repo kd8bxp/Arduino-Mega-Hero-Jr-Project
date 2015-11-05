@@ -1,0 +1,84 @@
+ key() - read a button push from the keypad (wait 30ish seconds for keypress returns keypressed)
+ ping() - read distance from ping sensor returns a distance in inches
+ led(#) - turn on led # 0 to 7 state is toggled on or off
+ forward(distance) - move forward 
+ reverse(distance) - move backward
+ left(degree) - turn servo to the left - this will make the robot turn to the right
+ right(degree) - turn servo to the right - this will make the robot turn to the left
+ light() - read the light sensor returns a vaule for the light sensor (high number less light, low number lots of light, normal light depends on room around 600 maybe)
+ volt() - check the voltage levels for the drive battery returns whole number of volts (operating voltages should be above 10volts)
+test() - test leds, speech, drive motor, turning motor, ultrasonic, voltage, light (may have turned into the test2 function)
+rinit() - reset Arduino Mega board to power on conditions (*resetFunc?)
+ listen() - returns when it hears a sound (Signal Wire hooks up to pin 53 on the Mega. Sound sensor works at 5v) return a 1 if sound detected, or 0 if no sound
+ speak(string) - string of what to say
+ speakint(int) - say an int number by converting it to a string
+ speakcmd(command) - gives a way to change the speech output ** needs to be rewritten for use with the nano microcontroller **
+ singhbd() - sing Happy Birthday  ** Test with the nano microcontroller **
+ singdaisy() - sing Daisy ** Needs to be rewritten for use with the nano microcontroller **
+ guess() - Guess the Number between 0 and 999 game (not done)
+ keytest() - test the keypad
+
+*resetFunc()
+
+More Functions to add relating to the Keypad:
+sing - mapped to key 4 - randomly sign one of three songs 
+play - mapped to key 5 - Ask which game you want to play
+help - mapped to key 6 - 
+speak - mapped to key 7 - 
+gab - mapped to key 8 -
+poet - mapped to key 9 - tells a random poem (one of three)
+demo - mapped to key A - not sure yet
+guard - mapped to key B - random move, using ultra sonic and drive
+alarm - mapped to key C - Using PIR or Ultrasonic to watch something and make sure it doesn't move - if it does sound alarm (probably loud speech)
+plan - mapped to key D - not sure what this does
+setup - mapped to key E - 
+enter - mapped to key F - enter key
+
+ motortest() - test routine for the drive and servo motors
+ cylon(#) - cycle the LEDs like a cylon X number of times - resets leds to state they were in before routine called
+ credit() - 
+
+ rhyme1() - A Tisket, A Tasket
+ rhyme2() - Humpty Dumpty
+ quote1() - Sarah Louise Delany
+ quote2() - Terry Pratchett
+ quote3() - Albert Einstein
+ quote4() - Albert Einstein
+ quote5() - ALbert Einstein
+ robotlaws() - Isaac Asimov's 3 laws of Robotics
+ test2() - test voltage, ping, light, sound, say quotes, say rhymes, sing, test leds
+ledup()
+ animals() - guess the animal you are thinking of (not started)
+ bagels() - mastermind style game (not started)
+ blackjack() - blackjack (not started)
+ aceyducey() - card game of Acey Ducey (not started)
+ civilwar() - Civil War game (not started)
+ combat() - Combat game (not started)
+ craps() - craps game (not started)
+ depthcharge() - Depth Charge Game (not started)
+ dice() - Simulates rolling a pair of dice and tells the frequency of each number 
+ furtrader() - Fur Trader Game (not started)
+ hammurabi() - Game of Hamurabi (not started)
+ hangman() - Game of Hangman (not started)
+ hello() - A Conversational program (not started)
+ ledmouth() - trys to simulate a mouth as the robot talks - returns the leds to the state they were before calling the routine
+ ledup() - quickly has the leds flash from bottom to top 5 times - returns the leds to the state they were before calling routine
+ shufflecards() - routine needed by some of the card games to shuffle the cards
+ resetdeck() - clear deck, put in a un-shuffled state needed by some of the card games
+ filldeck() - used by the card games to stack the deck
+ shuffledeck() - uses the above card routines to shuffle the deck of cards. Needed for the card games
+ play() - Menu for the games built into Hero Jr.
+ multikey() - routine to enter numbers upto 5 digits, you can use the "Enter" key if less than 5 digits
+ decToBcd(byte) - convert a dec number to BCD return the BCD number
+ bcdToDec(byte) - convert BCD to a Dec number return the DEC number
+ setDE3231time(second, minute, hour, dayofweek, dayofmonth, month, year) - Set the Real Time Clock used by other routines to do work
+ readDS3231time(second, minute, hour, dayofweek, dayofmonth, month, year) - Read the Real Time Clock used by other routines to do work
+ displayTime() - Prints to Serial monitor the Time & Date, also speaks the Time and Date
+ spin() - spins the robot almost 1 full turn, he should start and stop at roughly the same spot
+ settime() - Asks users if the time needs to be set - lets you set the time from the keypad using voice prompts.
+
+ starwarsplay() - Special Star Wars Day routine to play random sounds from the MP3 player (currently not working correctly)
+
+
+
+
