@@ -18,7 +18,7 @@ TODO: Write usage instructions
 
 ## Credits
 
-LeRoy Miller (2015)
+LeRoy Miller (2015-2020)
 
 ## License
 

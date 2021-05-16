@@ -1,0 +1,13 @@
+mosquitto_pub -h hero.local -t topic/joke -m dad  (momma/joke)
+mosquitto_pub -h hero.local -t topic/bored -m 1
+
+
+
+python reset.py "/dev/ttyACM0"
+./serial2mqtt.x86_64 config.json -m miner.local &
+
+mosquitto_pub -t "src/myTopic/blink" -h miner.local -m "0" {"1"}
+mosquitto_pub -t "src/myTopic/count" -h miner.local -m "1"
+
+mosquitto_sub -t src/myTopic/time -h miner.local
+
